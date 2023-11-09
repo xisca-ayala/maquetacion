@@ -1,0 +1,25 @@
+.parentElement{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    display: flex;
+    height: 7vh;
+    background-color: #000000;
+    color:white ;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section{
+    display:flex; 
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content:space-around;   
+}
+
+
+
+
+
