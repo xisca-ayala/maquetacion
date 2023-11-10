@@ -18,21 +18,26 @@
     justify-content: center; 
     font-size:x-large;
     font-weight: bold;
+    padding-bottom: 5vh;
 }
-.article{
+.main{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin-top: 10vh; 
+    height: 80vh;
+    align-items:center;
+    justify-content: space-evenly;
 }
 
 .text{
-    background-color: yellow;
     display: flex;
-    flex-wrap: wrap;  
+    width: 50%;
+    flex-direction: column;
+  
+
 }
 
-.image{
-    height: 5%;
-    background-color: greenyellow;
+.img{
+    height: 40vh;
+    display: flex;
+   
 }

@@ -13,9 +13,13 @@
 }
 
 .section{
-    display:flex; 
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content:space-around;   
-    max-width: 100%;
+   width: 100%;  
+   display:flex; 
+   flex-wrap: wrap;  
+   height: 80vh;
+}
+
+img{
+    width: 33.3333%;
+    height: 48vh;
 }
