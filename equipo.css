@@ -1,0 +1,194 @@
+body {
+    background-image: linear-gradient(14deg, #040404 0%,#061d68  50%, #0000ff 100%);
+    font-family: 'Poppins', 'Arial Black', 'Gadget';
+    margin: 0 auto;
+    background-color: #040404;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 15vh;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    background-color: #040404;
+    box-shadow: 0px 0px 25px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.codenotch1-2{
+    font-size: 6vh;
+    margin-right: 20%;
+}
+
+.main{
+    height: 80%;
+    width: 100%;
+}
+
+
+.section1{
+    margin-top: 15vh;
+    margin-bottom: 2vh;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+}
+
+.section2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 105vh;
+    width: 100%;
+    color:#0000ff;
+}
+
+.column1{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+    background-color: #040404;
+  
+}
+
+.column2{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+
+}
+
+.column3{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+    background-color: white;
+}
+
+.column4{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+}
+
+.member1{
+    height: 35vh;
+    padding:5vh;
+    background-image:url(photos/sonriendo-hombre-sentado-vector-cafe-gesticular.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    
+}
+
+.member2{
+    height: 35vh;
+    padding:5vh;
+    background-image:url(photos/alegre-mujer-mediana-edad-cabello-rizado.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    
+
+}
+.member3{
+    height: 35vh;
+    padding:5vh;
+    background-image:url(photos/programador-es-software-codificacion-programacion\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+   
+}
+
+
+.memberwhite{
+    height: 35vh;
+    padding:5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: white;
+}
+
+.memberblack{
+    height: 35vh;
+    padding:5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-color: black;
+}
+
+.member4{
+    height: 35vh;
+    padding:5vh;
+    background-image:url(photos/risa-mujer-computadora-portatil-oficina.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+}
+
+.member5{
+    height: 35vh;
+    padding:5vh;
+    background-image:url(photos/hombre-disenador-grafico-que-mira-documento-grafico.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+}
+.member6{
+    height: 35vh;
+    padding:5vh;
+    background-image:url(photos/chica-feliz-sentada-cafe-trabajando-computadora-portatil-mujer-alegre-sonriente-usando-computadora-portatil-cafeteria-freelancer-espacio-coworking-estudiante-estudiando-linea-cafe.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+}
+
+.footer{
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
