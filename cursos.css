@@ -1,0 +1,150 @@
+body{
+    background-color: #040404;
+    margin: 0 auto;
+    font-family: 'Poppins', 'Arial Black', 'Gadget';
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #061d68;
+    background-image: linear-gradient(14deg, #040404 0%,#061d68  50%, #0000ff 100%);  
+}
+
+.header{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 15vh;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    background-color: #040404;
+    box-shadow: 0px 0px 25px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.codenotch1-2{
+    font-size: 6vh;
+    margin-right: 20%;
+}
+
+.main{
+    height: 90%;
+    width: 100%;
+}
+
+.headerMain{
+   margin-top: 15vh;
+    margin-bottom: 2vh;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+}
+
+.cursosIntensivos{
+    color:#040404;
+}
+.main1{
+    display:flex;
+    flex-direction: row;
+    color: white; 
+ 
+}
+
+.titulo{
+    font-size: 200%;
+
+}
+.cursoDev{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textDev{
+    width: 80%;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.cursoData{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenDev{
+    height: 30%;
+    width: 80%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 5px;
+}
+
+.imagenData{
+    height: 30%;
+    width: 80%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 5px;
+}
+
+.imgmain2{
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+
+}
+.main3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+    width: 100%;
+    margin-top: 7vh;
+    margin-bottom: 10vh;
+    color: white;
+    font-size: 200%;
+  
+}
+
+
+.main3Element{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer{
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
