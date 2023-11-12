@@ -67,7 +67,7 @@ a{
     height: 100%;
     width: 25%;
     background-color: #040404;
-  
+    align-items: center;
 }
 
 .column2{
@@ -75,7 +75,6 @@ a{
     flex-direction: column;
     height: 100%;
     width: 25%;
-
 }
 
 .column3{
@@ -84,6 +83,7 @@ a{
     height: 100%;
     width: 25%;
     background-color: white;
+    align-items: center;
 }
 
 .column4{
