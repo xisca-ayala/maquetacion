@@ -23,7 +23,9 @@ body{
     background-color: black;
     color: white;
     box-shadow: 0px 0px 25px;
+    position: fixed;
 }
+
 .logo{
     height: 15vh;
     width: 15vh;
@@ -45,6 +47,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items:center;
+    padding-top: 15vh;
 }
 
 .travel{
@@ -53,7 +56,7 @@ font-family: 'Pacifico', cursive;
 }
 
 .moreInfoDescription{
-    margin-top: 30vh;
+    margin-top: 40vh;
     margin-bottom: 20vh;
     margin-left: 10px;
     margin-right: 10px;
@@ -108,6 +111,7 @@ font-family: 'Pacifico', cursive;
     color: aliceblue;
     justify-content: space-around;
     align-items: center;
+    border-radius: 10px;
 
 }
 
@@ -120,7 +124,7 @@ font-family: 'Pacifico', cursive;
 
 .formBox{
     background-color: rgb(23, 23, 80);
-    height: 50vh;
+    height: 80vh;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -130,14 +134,29 @@ font-family: 'Pacifico', cursive;
 
 .formBackground{
     background-color: aliceblue;
-    width: 50%;
-    height: 60%;
+    width: 60%;
+    height: 90%;
     margin: 10vh;
     display: flex;
-    padding-bottom: 10vh;
+    padding-bottom: 2vh;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center; 
+    box-shadow: 0px 0px 20px;
+    border-radius: 20px;
+    
 
+}
+
+.form{
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: x-large;
+    margin: 3vh;
+}
+
+.destino{
+    margin-bottom: 3vh;
 }
 
 
