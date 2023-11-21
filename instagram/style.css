@@ -2,19 +2,30 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    size: 10px;
+    font-size: 14px;
+    position: relative;
 }
 
 :root{
     --line:1px solid rgb(222, 222, 222);
     --colorLetters: rgb(139, 139, 139);
     --colorBackGrey:rgb(244, 244, 244); 
+    --colorButton:#64a0ea;
     --colorblue:#2851A3;
+}
+
+body{
+    margin:0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container{
     display:flex;
     flex-direction: column;
+    text-align: center;
     width: 100%;
 }
 
@@ -22,7 +33,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 900px;
+    height: 800px;
     width: 100%;
     align-items: center;
 
@@ -44,6 +55,7 @@
     height: 782px;
     width: 350px;
     margin: 12px 0px 0px;
+    padding-top: 100px;
 }
 
 .section1{
@@ -84,6 +96,7 @@
     width:256px;
     border-radius: 8px;
     border:none;
+    font-weight: bold;
 }
 
 .nexus{
@@ -102,7 +115,7 @@
 
 .section2{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 63px;
@@ -112,10 +125,17 @@
     border: var(--line);
 }
 
+.regist{
+    font-weight: bold;
+    margin-left: 5px;
+    color: var(--colorButton);
+}
+
 .facebookInfo{
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-weight: bold;
 }
 
 .facebookLogo{
@@ -134,21 +154,22 @@
 }
 
 .legalInfo{
-    color: var(--colorblue);
+    color: var(--colorLetters);
     font-size: smaller;
-    margin: 5px 5px 5px 5px;
+    margin: 5px 18px 0px 18px;
 }
 
 .section3{
     display: flex;
     flex-direction: column;
-    height: 95px;
+    align-items: center;
+    height: 63px;
     width: 350px;
     margin: 0px 0px 10px;
     padding: 10px 0px;
 }
 
-.appstore{
+.appStore{
     height: 63px;
     width: 350px;
 }
@@ -161,14 +182,43 @@
 .footer1{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer2{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footerElement{
+    margin-right: 15px;
+    color: var(--colorLetters);
+    font-size: small;
 }
 
 .facebookName{
     width: 240px;
     height: 70px;
+}
+
+@media screen and (max-width:875px)
+{
+    .imgBox{
+        display:none;
+    }
+}
+
+@media screen and (max-width:450px) 
+{
+    .section1{
+        border:none;
+    }
+
+    .section2{
+        border:none;
+    }
+    
 }
