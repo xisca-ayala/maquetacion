@@ -177,6 +177,7 @@
     grid-column: x15/x17;
     grid-row: y18/y19;
     font-weight: bold;
+    text-align: center;
 }
 
 .sidebar2{
@@ -192,6 +193,7 @@
     grid-column: x15/x17;
     grid-row: y20/y21;
     font-size: small;
+    text-align: center;
 }
 
 .sidebar3{
@@ -200,6 +202,7 @@
     display:grid;
     grid-template-columns:[x4]0.5fr [x15]5fr[x16]5fr [x17]0.5fr [x2] ;
     grid-template-rows:[y16]0fr [y22]5fr [y23]0fr [y17];
+    text-align:center;
 }
 
 .sidebarBox3{
@@ -222,5 +225,6 @@
     grid-column: x15/x17;
     grid-row: y24/y25;
     font-size: small;
+    text-align: center;
 }
 
