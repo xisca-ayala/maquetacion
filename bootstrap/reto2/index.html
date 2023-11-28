@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cajas Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
     <header>
-        <div class="row bg-black style=" style="height: 10vh;">
+        <div class="row bg-black" style="height: 10vh;">
             <div class="row bg-black">
             <div class="col-1">
                 <img src="img/nash!.png" class="img-fluid mx-width:50% height:auto border border-0" alt="...">
@@ -22,25 +24,32 @@
                       </a>
                     </div>
             </div>
+            <!-- button modal -->
             <div class="col-1 align-items-center d-flex align-items-center">
-              <div class="modal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-                <button type="button" class="btn btn-light">CARRITO</button>
+                <button id="showModal" type="button" class="btn btn-light">CARRITO</button>
+                <!-- modal -->
+                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Añadido al carrito</h5>
+                        <button type="button" id="closeModal1" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body" id="modalBody">
+                      </div>
+                      <div class="modal-footer">
+                        <div class="text-pink">TOTAL COMPRA:
+                          <div></div>
+                        </div>
+                        <button type="button" id="closeModal2" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-dark">Compra</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <!-- finish modal -->
             </div>
         </div>
     </header>
@@ -54,7 +63,7 @@
                         <h5 class="card-title">Pantalón suelto gris</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <p class="card-text">20€</p>
-                        <a href="#" class="btn btn-dark">Añadir al carrito</a>
+                        <a href="#" id="clothes1" class="btn btn-dark">Añadir al carrito</a>
                       </div>
                     </div>
               </div>
@@ -65,7 +74,7 @@
                         <h5 class="card-title">Vestido Túnico</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <p class="card-text">18€</p>
-                        <a href="#" class="btn btn-dark">Añadir al carrito</a>
+                        <a href="#" id="clothes2" class="btn btn-dark">Añadir al carrito</a>
                       </div>
                     </div>
               </div>
@@ -76,7 +85,7 @@
                         <h5 class="card-title">Falda Mid Print</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <p class="card-text">12€</p>
-                        <a href="#" class="btn btn-dark">Añadir al carrito</a>
+                        <a href="#" id="clothes3" class="btn btn-dark">Añadir al carrito</a>
                       </div>
                     </div>
               </div>
@@ -87,7 +96,7 @@
                         <h5 class="card-title">Cardigan Largo Rayas</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <p class="card-text">22€</p>
-                        <a href="#" class="btn btn-dark">Añadir al carrito</a>
+                        <a href="#" id="clothes4" class="btn btn-dark">Añadir al carrito</a>
                       </div>
                     </div>
               </div>
@@ -100,7 +109,7 @@
                         <h5 class="card-title">Falda Animal</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <p class="card-text">21€</p>
-                        <a href="#" class="btn btn-dark">Añadir al carrito</a>
+                        <a href="#" id="clothes5" class="btn btn-dark">Añadir al carrito</a>
                       </div>
                     </div>
               </div>
@@ -111,7 +120,7 @@
                         <h5 class="card-title">Mono Beig</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <p class="card-text">25€</p>
-                        <a href="#" class="btn btn-dark">Añadir al carrito</a>
+                        <a href="#" id="clothes6" class="btn btn-dark">Añadir al carrito</a>
                       </div>
                     </div>
               </div>
@@ -122,7 +131,7 @@
                         <h5 class="card-title">Vestido gris claro</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <p class="card-text">24€</p>
-                        <a href="#" class="btn btn-dark">Añadir al carrito</a>
+                        <a href="#" id="clothes7" class="btn btn-dark">Añadir al carrito</a>
                       </div>
                     </div>
               </div>
@@ -133,7 +142,7 @@
                         <h5 class="card-title">Pantalón Ancho</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <p class="card-text">20€</p>
-                        <a href="#" class="btn btn-dark">Añadir al carrito</a>
+                        <a href="#" id="clothes8" class="btn btn-dark">Añadir al carrito</a>
                       </div>
                     </div>
               </div>
