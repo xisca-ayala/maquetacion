@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+:root{
+    --colorBottom:rgb(255, 56, 86);
+    --darkcolorBottom:rgb(201, 46, 70) ;
+}
+
+.header{
+    box-shadow: 0px 0px 30px;
+    position: fixed;
+    margin: 0 auto;
+}
+
+.tittle{
+    font-size:  50px;
+}
+
+.section1{
+    padding-top: 12%;
+    
+}
+
+.section2{
+    padding-top:30px;
+}
+
+.imgSection{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.imgSectionRight{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0% 50%;
+}
+.section1Text{
+    background: linear-gradient(to right, #000000, #30141c, #5b1d2e, #8a253d, #bb2c4a, #bc2c4d, #be2b4f, #bf2b52, #8f2549, #62203a, #371826, #12090e);
+}
+
+.section2Text{
+    background: linear-gradient(to right, #000000, #2e2d2d, #525151, #818080, #adacac, #c4c4c4, #e5e5e5, #dddddd, #8d8d8d, #5e5e5e, #303030, #12090e);
+}
+
+
+.textSection1{
+    margin: 20%;
+    color: white;
+    font-size: 30px;
+    
+}
+
+.textSection2{
+    margin: 20%;
+    color: black;
+    font-size: 50px; 
+}
+
+.imgSection2{
+    width: 100%;
+    object-fit: cover; 
+}
+
+.buttonMenu {
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: 0;
+    background-color: var(--colorBottom) ;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all .3s ease;
+    box-shadow: var(--darkcolorBottom) 0px 10px 0px 0px;
+    color: hsl(0, 0%, 100%);
+    margin-top: 25%;
+}
+       
+button:hover {
+    box-shadow: var(--darkcolorBottom) 0px 7px 0px 0px;
+}
+
+button:active {
+    background-color: var(--colorBottom);
+    /*50, 168, 80*/
+    box-shadow: var(--darkcolorBottom) 0px 0px 0px 0px;
+    transform: translateY(5px);
+    transition: 200ms;
+}
+
+
+.footer{
+    background-color: black;
+    color: white;
+}
+
+.section1Movies{
+    height: 400px;
+    width: 100%;
+    background-image:url(img/teatro.jpg);
+}
+
+.section2Movies{
+    margin-left: 180px;
+    margin-top: 100px;
+
+}
+
+
+
+
