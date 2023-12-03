@@ -104,8 +104,14 @@ button:active {
     background-image:url(img/teatro.jpg);
 }
 
+.section1Professionals{
+    height: 400px;
+    width: 100%;
+    background-image:url(img/palomitas-maiz.jpg);
+}
+
 .section2Movies{
-    margin-left: 15%;
+    margin-left: 10%;
     margin-top: 100px;
 
 }
