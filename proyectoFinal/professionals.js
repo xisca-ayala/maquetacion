@@ -1,6 +1,6 @@
 class Professionals{
 
-    constructor( name, age, weight, height, isRetired, nationality, oscarNumber, profession ){
+    constructor( name, age, weight, height, isRetired, nationality, oscarNumber, profession, img ){
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -9,22 +9,23 @@ class Professionals{
         this.nationality = nationality;
         this.oscarNumber = oscarNumber;
         this.profession = profession;
+        this.img =img;
     }
     
 }
 
 
-const JenniferLawrence = new Professionals ('Jennifer Lawrence', 33, 62, 165, false, 'estadounidense', 1 , 'actriz & productora');
-const ZoeSaldana = new Professionals ('Zoë Saldaña', 45, 65, 172, false, 'estadounidense', 0, 'actriz');
-const AnnaCastillo = new Professionals ('Anna Castillo', 30, 56, 162, false, 'española', 0 , 'actriz');
-const BradleyCooper = new Professionals ('Bradley Cooper', 48, 82, 190, false, 'estadounidense', 9 , 'actor');
+const JenniferLawrence = new Professionals ('Jennifer Lawrence', 33, 62, 165, false, 'estadounidense', 1 , 'actriz & productora', 'img/JenniferLaw.jpg');
+const ZoeSaldana = new Professionals ('Zoë Saldaña', 45, 65, 172, false, 'estadounidense', 0, 'actriz', 'img/009-zoe-saldana.webp');
+const AnnaCastillo = new Professionals ('Anna Castillo', 30, 56, 162, false, 'española', 0 , 'actriz', 'img/AnnaCastillo.webp');
+const BradleyCooper = new Professionals ('Bradley Cooper', 48, 82, 190, false, 'estadounidense', 9 , 'actor', 'img/Bradley-Cooper.webp');
 
 
 $(document).ready(function(){
     $('#targetZoe').html('<div class="card mb-3" style="max-width: 540px;">' +
    '<div class="row g-0">'+
       '<div class="col-md-4">' +
-        '<img src="img/009-zoe-saldana.webp" class="img-fluid rounded-start" alt="...">' +
+      '<img src="'+ ZoeSaldana.img +'"class="img-fluid rounded-start" alt="...">' +
       '</div>' +
      ' <div class="col-md-8">' + 
         '<div class="card-body">' +
@@ -42,7 +43,7 @@ $(document).ready(function(){
     $('#targetJenniferLawrence').html('<div class="card mb-3" style="max-width: 540px;">' +
    '<div class="row g-0">'+
       '<div class="col-md-4">' +
-        '<img src="img/JenniferLaw.jpg" class="img-fluid rounded-start" alt="...">' +
+        '<img src="'+ JenniferLawrence.img +'"class="img-fluid rounded-start" alt="...">' +
       '</div>' +
      ' <div class="col-md-8">' + 
         '<div class="card-body">' +
@@ -60,7 +61,7 @@ $(document).ready(function(){
     $('#targetAnnaCastillo').html('<div class="card mb-3" style="max-width: 540px;">' +
    '<div class="row g-0">'+
       '<div class="col-md-4">' +
-        '<img src="img/AnnaCastillo.webp" class="img-fluid rounded-start" alt="...">' +
+        '<img src="'+ AnnaCastillo.img +'"class="img-fluid rounded-start" alt="...">' +
       '</div>' +
      ' <div class="col-md-8">' + 
         '<div class="card-body">' +
@@ -78,7 +79,7 @@ $(document).ready(function(){
     $('#targetBradleyCooper').html('<div class="card mb-3" style="max-width: 540px;">' +
    '<div class="row g-0">'+
       '<div class="col-md-4">' +
-        '<img src="img/Bradley-Cooper.webp" class="img-fluid rounded-start" alt="...">' +
+        '<img src="'+ BradleyCooper.img +'"class="img-fluid rounded-start" alt="...">' +
       '</div>' +
      ' <div class="col-md-8">' + 
         '<div class="card-body">' +
