@@ -1,7 +1,7 @@
 
 class Movie{
 
-    constructor (title, releaseYear, nacionality, genre, actors, writer, director, language, plataforma, isMCU, mainCharacterName, producer, distributor){
+    constructor (title, releaseYear, nacionality, genre, actors, writer, director, language, plataforma, isMCU, mainCharacterName, producer, distributor, img){
         this.title = title;
         this.releaseYear = releaseYear;
         this.nacionality = nacionality;
@@ -15,23 +15,25 @@ class Movie{
         this.mainCharacterName = mainCharacterName;
         this.producer = producer;
         this.distributor = distributor;
+        this.img = img;
+        
     }
 
   
 } 
 
 
-const movieGuardianes = new Movie('Guardianes de la Galaxia', 2014, 'EUA', 'ciencia-ficcion', ['James Gunn', 'Chris Patt', 'Zoë Saldaña', 'Vin Diesel'], 'James Gunn', 'James Gunn', 'inglés', 'Disney+', true, 'Peter Quill', 'Marvel Studios','Walt Disney Studios Motion Pictures');
-const movieBarbie = new Movie('Barbie', 2023, 'EUA', 'comedia', ['Margot Robbie', 'Ryan Gosling', 'Will Ferret', 'Emma Mackey'], 'Greta Gerwig', 'Greta Gerwig', 'inglés', 'HBO', true, 'Baribe', 	'LuckyChap Entertainment','Warner Bros Pictures');
-const movieDondeCabenDos = new Movie('Donde caben dos', 2021, 'España', 'comedia', ['Anna Castillo', 'Carlos Cuevas', 'Verónica Echegui', 'Pilar Castro'], 'Paco Caballero', 'Paco Caballero', 'español', 'Netflix',false , 'Filmax & Netflix', 'Filmax');
-const movieLosJuegos = new Movie('Los juegos del hambre', 2012, 'EUA', 'ciencia-ficcion', ['Jennifer Lawrence', 'Josh Hutcherson', 'Liam Hemsworth', 'Elisabeth Banks'], 'Billy Ray' , 'Gary Ross', 'inglés', 'HBO', false, 'Katniss Everdeen', 'Lionsgate', 'Lionsgate');
+const movieGuardianes = new Movie('Guardianes de la Galaxia', 2014, 'EUA', 'ciencia-ficcion', ['James Gunn', 'Chris Patt', 'Zoë Saldaña', 'Vin Diesel'], 'James Gunn', 'James Gunn', 'inglés', 'Disney+', true, 'Peter Quill', 'Marvel Studios','Walt Disney Studios Motion Pictures', 'img/guardianes.jpg');
+const movieBarbie = new Movie('Barbie', 2023, 'EUA', 'comedia', ['Margot Robbie', 'Ryan Gosling', 'Will Ferret', 'Emma Mackey'], 'Greta Gerwig', 'Greta Gerwig', 'inglés', 'HBO', true, 'Baribe', 	'LuckyChap Entertainment','Warner Bros Pictures', 'img/BARBIEPOSTER_.webp');
+const movieDondeCabenDos = new Movie('Donde caben dos', 2021, 'España', 'comedia', ['Anna Castillo', 'Carlos Cuevas', 'Verónica Echegui', 'Pilar Castro'], 'Paco Caballero', 'Paco Caballero', 'español', 'Netflix',false , 'Clara','Filmax & Netflix', 'Filmax', 'img/Donde_caben_dos.jpg');
+const movieLosJuegos = new Movie('Los juegos del hambre', 2012, 'EUA', 'ciencia-ficcion', ['Jennifer Lawrence', 'Josh Hutcherson', 'Liam Hemsworth', 'Elisabeth Banks'], 'Billy Ray' , 'Gary Ross', 'inglés', 'HBO', false, 'Katniss Everdeen', 'Lionsgate', 'Lionsgate', 'img/juegos.jpg');
 
 
 $(document).ready(function(){
     $("#targetGuardianes").html('<div class="card mb-3" style="max-width: 750px;">' +
     '<div class="row g-0">' +
       '<div class="col-md-4">' +
-        '<img src="img/guardianes.jpg" class="img-fluid rounded-start" alt="...">' +
+        '<img src="' + movieGuardianes.img + '" class="img-fluid rounded-start" alt="...">' +
       '</div>' +
       '<div class="col-md-8">' +
         '<div class="card-body">' +
@@ -49,7 +51,7 @@ $(document).ready(function(){
     $("#targetBarbie").html('<div class="card mb-3" style="max-width: 750px;">' +
     '<div class="row g-0">' +
       '<div class="col-md-4">' +
-        '<img src="img/BARBIEPOSTER_.webp" class="img-fluid rounded-start" alt="...">' +
+        '<img src="' + movieBarbie.img + '" class="img-fluid rounded-start" alt="...">' +
       '</div>' +
       '<div class="col-md-8">' +
         '<div class="card-body">' +
@@ -67,7 +69,7 @@ $(document).ready(function(){
     $("#targetDondeCaben").html('<div class="card mb-3" style="max-width: 750px;">' +
     '<div class="row g-0">' +
       '<div class="col-md-4">' +
-        '<img src="img/Donde_caben_dos.jpg" class="img-fluid rounded-start" alt="...">' +
+        '<img src="' + movieDondeCabenDos.img + '" class="img-fluid rounded-start" alt="...">' +
       '</div>' +
       '<div class="col-md-8">' +
         '<div class="card-body">' +
@@ -85,7 +87,7 @@ $(document).ready(function(){
     $("#targetJuegos").html('<div class="card mb-3" style="max-width: 750px;">' +
     '<div class="row g-0">' +
       '<div class="col-md-4">' +
-        '<img src="img/juegos.jpg" class="img-fluid rounded-start" alt="...">' +
+        '<img src="' + movieLosJuegos.img +'" class="img-fluid rounded-start" alt="...">' +
       '</div>' +
       '<div class="col-md-8">' +
         '<div class="card-body">' +
