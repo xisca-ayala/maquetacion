@@ -121,7 +121,7 @@ $(document).ready(function(){
       const newImg = $("#newImg").val();
 
 
-       $("#newTargetsMovies").html('<div class="card mb-3" style="max-width: 750px;">' +
+       $(".newTargetsMovies").append('<div class="card mb-3" style="max-width: 750px;">' +
        '<div class="row g-0">' +
          '<div class="col-md-4">' +
            '<img src="' + newImg + '" class="img-fluid rounded-start" alt="...">' +
