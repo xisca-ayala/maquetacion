@@ -24,7 +24,7 @@ class Movie{
 
 
 const movieGuardianes = new Movie('Guardianes de la Galaxia', 2014, 'EUA', 'ciencia-ficcion', ['James Gunn', 'Chris Patt', 'Zoë Saldaña', 'Vin Diesel'], 'James Gunn', 'James Gunn', 'inglés', 'Disney+', true, 'Peter Quill', 'Marvel Studios','Walt Disney Studios Motion Pictures', 'img/guardianes.jpg');
-const movieBarbie = new Movie('Barbie', 2023, 'EUA', 'comedia', ['Margot Robbie', 'Ryan Gosling', 'Will Ferret', 'Emma Mackey'], 'Greta Gerwig', 'Greta Gerwig', 'inglés', 'HBO', true, 'Baribe', 	'LuckyChap Entertainment','Warner Bros Pictures', 'img/BARBIEPOSTER_.webp');
+const movieBarbie = new Movie('Barbie', 2023, 'EUA', 'comedia', ['Margot Robbie', 'Ryan Gosling', 'Will Ferret', 'Emma Mackey'], 'Greta Gerwig', 'Greta Gerwig', 'inglés', 'HBO', true, 'Barbie', 	'LuckyChap Entertainment','Warner Bros Pictures', 'img/BARBIEPOSTER_.webp');
 const movieDondeCabenDos = new Movie('Donde caben dos', 2021, 'España', 'comedia', ['Anna Castillo', 'Carlos Cuevas', 'Verónica Echegui', 'Pilar Castro'], 'Paco Caballero', 'Paco Caballero', 'español', 'Netflix',false , 'Clara','Filmax & Netflix', 'Filmax', 'img/Donde_caben_dos.jpg');
 const movieLosJuegos = new Movie('Los juegos del hambre', 2012, 'EUA', 'ciencia-ficcion', ['Jennifer Lawrence', 'Josh Hutcherson', 'Liam Hemsworth', 'Elisabeth Banks'], 'Billy Ray' , 'Gary Ross', 'inglés', 'HBO', false, 'Katniss Everdeen', 'Lionsgate', 'Lionsgate', 'img/juegos.jpg');
 
@@ -100,4 +100,41 @@ $(document).ready(function(){
   '</div>');
 });
 
+$(document).ready(function(){
+    $("#buttonForm").on("click", function(){
+      let newTitle = $("#newTitle").val();
+      let newReleaseYear = $("#newReleaseYear").val();
+      let newNacionality = $("#newNacionality").val();
+      let newGenre = $("#newGenre").val();
+      let newWriter = $("#newWriter").val();
+      let newDirector = $("#newDirector").val();
+      let newLanguage = $("#newLanguage").val();
+      let newPlataform = $("#newPlataform").val();
+      let newProducer = $("#newProducer").val();
+      let newDistributor = $("#newDistributor").val();
+      let newIsMCU = "";
+      if ($("#newIsMCU").prop("checked")){
+        newIsMCU = "Si"
+      }else{
+        newIsMCU = "No"
+      }
+      const newImg = $("#newImg").val();
+
+
+       $("#newTargetsMovies").html('<div class="card mb-3" style="max-width: 750px;">' +
+       '<div class="row g-0">' +
+         '<div class="col-md-4">' +
+           '<img src="' + newImg + '" class="img-fluid rounded-start" alt="...">' +
+         '</div>' +
+         '<div class="col-md-8">' +
+           '<div class="card-body">' +
+             '<h5 class="card-title">' + newTitle + '</h5>' +
+             '<p class="card-text">' + 'Año:' + newReleaseYear + '<br>' + 'Genero:' + newGenre + '<br>' + 'Nacionalidad:' +newNacionality+ '<br>' + 'Director:' + newDirector + '<br>' + 'Idioma:' + 
+             newLanguage +'<br>' + 'Plataforma:' + newPlataform +'<br>' + 'Es MCU:' + newIsMCU + '<br>' + '<br>' + 'Productor:' + newProducer + '<br>' + 'Distribuidor:' + newDistributor +'</p>' +
+          '</div>' +
+         '</div>' +
+       '</div>' +
+     '</div>');
+    })
+});
 
