@@ -16,10 +16,7 @@ class Movie{
         this.producer = producer;
         this.distributor = distributor;
         this.img = img;
-        
     }
-
-  
 } 
 
 
@@ -27,7 +24,6 @@ const movieGuardianes = new Movie('Guardianes de la Galaxia', 2014, 'EUA', 'cien
 const movieBarbie = new Movie('Barbie', 2023, 'EUA', 'comedia', ['Margot Robbie', 'Ryan Gosling', 'Will Ferret', 'Emma Mackey'], 'Greta Gerwig', 'Greta Gerwig', 'inglés', 'HBO', true, 'Barbie', 	'LuckyChap Entertainment','Warner Bros Pictures', 'img/BARBIEPOSTER_.webp');
 const movieDondeCabenDos = new Movie('Donde caben dos', 2021, 'España', 'comedia', ['Anna Castillo', 'Carlos Cuevas', 'Verónica Echegui', 'Pilar Castro'], 'Paco Caballero', 'Paco Caballero', 'español', 'Netflix',false , 'Clara','Filmax & Netflix', 'Filmax', 'img/Donde_caben_dos.jpg');
 const movieLosJuegos = new Movie('Los juegos del hambre', 2012, 'EUA', 'ciencia-ficcion', ['Jennifer Lawrence', 'Josh Hutcherson', 'Liam Hemsworth', 'Elisabeth Banks'], 'Billy Ray' , 'Gary Ross', 'inglés', 'HBO', false, 'Katniss Everdeen', 'Lionsgate', 'Lionsgate', 'img/juegos.jpg');
-
 
 $(document).ready(function(){
     $("#targetGuardianes").html('<div class="card mb-3" style="max-width: 750px;">' +
@@ -46,7 +42,6 @@ $(document).ready(function(){
   '</div>');
 });
 
-
 $(document).ready(function(){
     $("#targetBarbie").html('<div class="card mb-3" style="max-width: 750px;">' +
     '<div class="row g-0">' +
@@ -64,7 +59,6 @@ $(document).ready(function(){
   '</div>');
 });
 
-
 $(document).ready(function(){
     $("#targetDondeCaben").html('<div class="card mb-3" style="max-width: 750px;">' +
     '<div class="row g-0">' +
@@ -81,7 +75,6 @@ $(document).ready(function(){
     '</div>' +
   '</div>');
 });
-
 
 $(document).ready(function(){
     $("#targetJuegos").html('<div class="card mb-3" style="max-width: 750px;">' +
@@ -117,9 +110,8 @@ $(document).ready(function(){
         newIsMCU = "Si"
       }else{
         newIsMCU = "No"
-      }
+      };
       const newImg = $("#newImg").val();
-
 
        $(".newTargetsMovies").append('<div class="card mb-3" style="max-width: 750px;">' +
        '<div class="row g-0">' +
