@@ -25,6 +25,8 @@ const movieBarbie = new Movie('Barbie', 2023, 'EUA', 'comedia', ['Margot Robbie'
 const movieDondeCabenDos = new Movie('Donde caben dos', 2021, 'España', 'comedia', ['Anna Castillo', 'Carlos Cuevas', 'Verónica Echegui', 'Pilar Castro'], 'Paco Caballero', 'Paco Caballero', 'español', 'Netflix',false , 'Clara','Filmax & Netflix', 'Filmax', 'img/Donde_caben_dos.jpg');
 const movieLosJuegos = new Movie('Los juegos del hambre', 2012, 'EUA', 'ciencia-ficcion', ['Jennifer Lawrence', 'Josh Hutcherson', 'Liam Hemsworth', 'Elisabeth Banks'], 'Billy Ray' , 'Gary Ross', 'inglés', 'HBO', false, 'Katniss Everdeen', 'Lionsgate', 'Lionsgate', 'img/juegos.jpg');
 
+let movies = [movieGuardianes, movieBarbie, movieDondeCabenDos, movieLosJuegos];
+
 $(document).ready(function(){
     $("#targetGuardianes").html('<div class="card mb-3" style="max-width: 750px;">' +
     '<div class="row g-0">' +
