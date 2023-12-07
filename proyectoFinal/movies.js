@@ -17,6 +17,21 @@ class Movie{
         this.distributor = distributor;
         this.img = img;
     }
+
+    printMovie(){
+      const isMCU = this.isMCU ? "Si" : "No";
+      return '<div class="col-md-6 targetMovie">' + '<div class="card mb-3" style="max-width: 750px;">' +
+      '<div class="row g-0">' +
+        '<div class="col-md-4">' +
+          '<img src="' + this.img + '" class="img-fluid rounded-start" alt="...">' +
+        '</div>' +
+        '<div class="col-md-8">' +
+          '<div class="card-body">' +
+            '<h5 class="card-title">' + this.title + '</h5>' +
+            '<p class="card-text">Año:' + this.releaseYear + '<br>Genero:' + this.genre + '<br>Nacionalidad:' + this.nacionality + '<br>Actores:' + this.actors +'<br>Director:' + this.director + '<br>Idioma:' + 
+            this.language +'<br>Plataforma:' + this.plataforma + '<br>Es MCU:' + isMCU + '<br>Personaje Principal:' + this.mainCharacterName + '<br>Productor:' + this.producer + '<br>Distribuidor:' + this.distributor + '</p>' +
+         '</div></div></div></div></div>';
+    }
 } 
 
 
@@ -28,107 +43,29 @@ const movieLosJuegos = new Movie('Los juegos del hambre', 2012, 'EUA', 'ciencia-
 let movies = [movieGuardianes, movieBarbie, movieDondeCabenDos, movieLosJuegos];
 
 $(document).ready(function(){
-    $("#targetGuardianes").html('<div class="card mb-3" style="max-width: 750px;">' +
-    '<div class="row g-0">' +
-      '<div class="col-md-4">' +
-        '<img src="' + movieGuardianes.img + '" class="img-fluid rounded-start" alt="...">' +
-      '</div>' +
-      '<div class="col-md-8">' +
-        '<div class="card-body">' +
-          '<h5 class="card-title">' + movieGuardianes.title + '</h5>' +
-          '<p class="card-text">' + 'Año:' + movieGuardianes.releaseYear + '<br>' + 'Genero:' + movieGuardianes.genre + '<br>' + 'Nacionalidad:' + movieGuardianes.nacionality + '<br>' + 'Actores:' + movieGuardianes.actors +'<br>' + 'Director:' + movieGuardianes.director + '<br>' + 'Idioma:' + 
-          movieGuardianes.language +'<br>' + 'Plataforma:' + movieGuardianes.plataforma +'<br>' + 'Es MCU:' + movieGuardianes.isMCU + '<br>' + 'Personaje Principal:' + movieGuardianes.mainCharacterName + '<br>' + 'Productor:' + movieGuardianes.producer + '<br>' + 'Distribuidor:' + movieGuardianes.distributor +'</p>' +
-       '</div>' +
-      '</div>' +
-    '</div>' +
-  '</div>');
+    printAllMovies();
+
+    function printAllMovies() {
+    let html = '';
+        let index = 1;
+        movies.forEach(function(movie){
+          if (index %2!=0){
+            html+= '<div class="row">' + movie.printMovie();
+          }else{
+            html += movie.printMovie() + '</div>';
+          };
+          index++;
+          $("#section2Movies").html(html);
+        });
+    }
+
+    $('#buttonForm').on("click", function(){
+      const newMovie = new Movie($("#newTitle").val(), $("#newReleaseYear").val(), $("#newNacionality").val(), $("#newGenre").val(), [], $("#newWriter").val(), 
+        $("#newDirector").val(), $("#newLanguage").val(), $("#newPlataform").val(), $("#newIsMCU").prop("checked") ? "Si" : "No", $("#newMainCharacter").val(), $("#newProducer").val(), 
+        $("#newDistributor").val(), $("#newImg").val());
+      movies.push(newMovie);
+      printAllMovies();
+    });
 });
 
-$(document).ready(function(){
-    $("#targetBarbie").html('<div class="card mb-3" style="max-width: 750px;">' +
-    '<div class="row g-0">' +
-      '<div class="col-md-4">' +
-        '<img src="' + movieBarbie.img + '" class="img-fluid rounded-start" alt="...">' +
-      '</div>' +
-      '<div class="col-md-8">' +
-        '<div class="card-body">' +
-          '<h5 class="card-title">' + movieBarbie.title + '</h5>' +
-          '<p class="card-text">' + 'Año:' + movieBarbie.releaseYear + '<br>' + 'Genero:' + movieBarbie.genre + '<br>' + 'Nacionalidad:' + movieBarbie.nacionality + '<br>' + 'Actores:' + movieBarbie.actors +'<br>' + 'Director:' + movieBarbie.director + '<br>' + 'Idioma:' + 
-          movieBarbie.language +'<br>' + 'Plataforma:' + movieBarbie.plataforma +'<br>' + 'Es MCU:' + movieBarbie.isMCU + '<br>' + 'Personaje Principal:' + movieBarbie.mainCharacterName + '<br>' + 'Productor:' + movieBarbie.producer + '<br>' + 'Distribuidor:' + movieBarbie.distributor +'</p>' +
-       '</div>' +
-      '</div>' +
-    '</div>' +
-  '</div>');
-});
-
-$(document).ready(function(){
-    $("#targetDondeCaben").html('<div class="card mb-3" style="max-width: 750px;">' +
-    '<div class="row g-0">' +
-      '<div class="col-md-4">' +
-        '<img src="' + movieDondeCabenDos.img + '" class="img-fluid rounded-start" alt="...">' +
-      '</div>' +
-      '<div class="col-md-8">' +
-        '<div class="card-body">' +
-          '<h5 class="card-title">' + movieDondeCabenDos.title + '</h5>' +
-          '<p class="card-text">' + 'Año:' + movieDondeCabenDos.releaseYear + '<br>' + 'Genero:' + movieDondeCabenDos.genre + '<br>' + 'Nacionalidad:' + movieDondeCabenDos.nacionality + '<br>' + 'Actores:' + movieDondeCabenDos.actors +'<br>' + 'Director:' + movieDondeCabenDos.director + '<br>' + 'Idioma:' + 
-          movieDondeCabenDos.language +'<br>' + 'Plataforma:' + movieDondeCabenDos.plataforma +'<br>' + 'Es MCU:' + movieDondeCabenDos.isMCU + '<br>' + 'Personaje Principal:' + movieDondeCabenDos.mainCharacterName + '<br>' + 'Productor:' + movieDondeCabenDos.producer + '<br>' + 'Distribuidor:' + movieDondeCabenDos.distributor +'</p>' +
-       '</div>' +
-      '</div>' +
-    '</div>' +
-  '</div>');
-});
-
-$(document).ready(function(){
-    $("#targetJuegos").html('<div class="card mb-3" style="max-width: 750px;">' +
-    '<div class="row g-0">' +
-      '<div class="col-md-4">' +
-        '<img src="' + movieLosJuegos.img +'" class="img-fluid rounded-start" alt="...">' +
-      '</div>' +
-      '<div class="col-md-8">' +
-        '<div class="card-body">' +
-          '<h5 class="card-title">' + movieLosJuegos.title + '</h5>' +
-          '<p class="card-text">' + 'Año:' + movieLosJuegos.releaseYear + '<br>' + 'Genero:' + movieLosJuegos.genre + '<br>' + 'Nacionalidad:' + movieLosJuegos.nacionality + '<br>' + 'Actores:' + movieLosJuegos.actors +'<br>' + 'Director:' + movieLosJuegos.director + '<br>' + 'Idioma:' + 
-          movieLosJuegos.language +'<br>' + 'Plataforma:' + movieLosJuegos.plataforma +'<br>' + 'Es MCU:' + movieLosJuegos.isMCU + '<br>' + 'Personaje Principal:' + movieLosJuegos.mainCharacterName + '<br>' + 'Productor:' + movieLosJuegos.producer + '<br>' + 'Distribuidor:' + movieLosJuegos.distributor +'</p>' +
-       '</div>' +
-      '</div>' +
-    '</div>' +
-  '</div>');
-});
-
-$(document).ready(function(){
-    $("#buttonForm").on("click", function(){
-      let newTitle = $("#newTitle").val();
-      let newReleaseYear = $("#newReleaseYear").val();
-      let newNacionality = $("#newNacionality").val();
-      let newGenre = $("#newGenre").val();
-      let newWriter = $("#newWriter").val();
-      let newDirector = $("#newDirector").val();
-      let newLanguage = $("#newLanguage").val();
-      let newPlataform = $("#newPlataform").val();
-      let newProducer = $("#newProducer").val();
-      let newDistributor = $("#newDistributor").val();
-      let newIsMCU = "";
-      if ($("#newIsMCU").prop("checked")){
-        newIsMCU = "Si"
-      }else{
-        newIsMCU = "No"
-      };
-      const newImg = $("#newImg").val();
-
-       $(".newTargetsMovies").append('<div class="card mb-3" style="max-width: 750px;">' +
-       '<div class="row g-0">' +
-         '<div class="col-md-4">' +
-           '<img src="' + newImg + '" class="img-fluid rounded-start" alt="...">' +
-         '</div>' +
-         '<div class="col-md-8">' +
-           '<div class="card-body">' +
-             '<h5 class="card-title">' + newTitle + '</h5>' +
-             '<p class="card-text">' + 'Año:' + newReleaseYear + '<br>' + 'Genero:' + newGenre + '<br>' + 'Nacionalidad:' +newNacionality+ '<br>' + 'Director:' + newDirector + '<br>' + 'Idioma:' + 
-             newLanguage +'<br>' + 'Plataforma:' + newPlataform +'<br>' + 'Es MCU:' + newIsMCU + '<br>' + '<br>' + 'Productor:' + newProducer + '<br>' + 'Distribuidor:' + newDistributor +'</p>' +
-          '</div>' +
-         '</div>' +
-       '</div>' +
-     '</div>');
-    })
-});
 
